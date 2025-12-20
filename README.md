@@ -11,5 +11,3 @@
 
 [DeepFish_low](https://drive.google.com/file/d/1fMN3lHjSRwpsKiLn9lP-nkckhahGcJYa/view?usp=drive_link)
 
-# Checkpoint
-# MAS3K
