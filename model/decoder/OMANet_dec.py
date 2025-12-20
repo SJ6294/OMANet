@@ -207,8 +207,7 @@ class OPM(nn.Module):
         e_c = self._entropy(att_c) / math.log(att_c.size(-1))
         ent_score = (1.0 - torch.min(e_r, e_c)).clamp(0.0, 1.0)
 
-        sparsity_raw  = self._sparsity(att_r) * 0.5 + self._sparsity(att_c) * 0.5
-        sparsity_score = torch.sigmoid(sparsity_raw)
+        sparsity_score  = self._sparsity(att_r) * 0.5 + self._sparsity(att_c) * 0.5
 
         g = self.pool(feat).view(B, -1)
         g_score = self.fc(g).squeeze(1)                      # (B,)
@@ -630,6 +629,7 @@ class Decoder(nn.Module):
 
     def initialize(self):
         weight_init(self)
+
 
 
 
