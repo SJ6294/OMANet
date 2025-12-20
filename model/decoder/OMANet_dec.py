@@ -541,9 +541,6 @@ class OMGM(nn.Module):
 
         out = torch.cat([xo, xb, xf], dim=1)
         out = self.fuse(out)
-        out = torch.cat([xo, xb, xf], 1)
-
-        out = self.fuse(out)
               
         return out   
     
@@ -633,6 +630,7 @@ class Decoder(nn.Module):
 
     def initialize(self):
         weight_init(self)
+
 
 
 
