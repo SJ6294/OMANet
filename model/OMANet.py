@@ -3,8 +3,7 @@ from torch import nn
 
 from .encoder.BNM import BNM
 from .encoder.pvtv2_encoder import pvt_v2_b2
-from .decoder.OMANet_dec_onnx import Decoder  # omanet_teacher_dec_feat
-
+from .decoder.OMANet_dec import Decoder  
 from timm.models import create_model
 
 import torch.nn as nn
